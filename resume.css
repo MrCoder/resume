@@ -1,0 +1,379 @@
+
+html,body
+{
+	margin: 0em;
+	padding: 0em;
+	color: black;
+	background-color: white;
+
+	/* This centers the page content for IE */
+	text-align: center;
+}
+
+body
+{
+	font-size: 79.0%; /* Base font size */
+}
+
+/* This sets the font-types */
+body, h1, h2, h3, h4, h5, h6, p, li, dt, dd
+{
+	font-family: Verdana,Helvetica,Arial,sans-serif;
+}
+
+
+/* Ordinary paragraphs and lists */
+p, ul, ol, dl
+{
+	font-style: normal;
+	margin-top: 0em;
+	padding-top: 0em;
+
+	margin-bottom: 1.2em;
+	padding-bottom: 0em;
+
+	font-size: 1.0em;
+}
+
+/* Acronyms */
+
+acronym,abbr
+{
+	border-width: 0px;
+	cursor: help;
+}
+
+acronym,abbr:hover
+{
+	border-bottom: 1px dotted black;
+}
+
+
+/* =================================== Link Properties =================================== */
+
+div#page a:link,
+	div#page a:visited
+{
+	color: black;
+	background-color: white;
+}
+
+div#page a:hover,
+	div#page a:active
+{
+	color: blue;
+	background-color: white;
+}
+
+/* ========================================= Page ===================================== */
+
+/* This holds the page as a whole */
+
+div#page
+{
+	width: 670px;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-top: 1.5em;
+
+	/* This counteracts the "text-align: center" on the body element which is necessary
+		in order to get IE to center this. */
+	text-align: left;
+}
+
+/* ================================== Headers ========================================= */
+
+/* Used for my name, currently */
+div#page h1
+{
+	margin: 0em;
+	font-size: 2.5em;
+
+	text-align: right;
+	border-bottom: 1px solid black;
+}
+
+/* Reset the properties for these headers... */
+div#page h2,
+	div#page h3
+{
+	margin: 0em;
+	padding: 0em;
+}
+
+/* The section headers, such as "Professional Profile" and "Skills" */
+div#page h2
+{
+	font-size: 1.2em;
+	font-weight: bold;
+
+	/* This leaves room for the yanking bit (below) */
+	margin-top: 2.3em;
+
+	/* Borders on three sides */
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+/* This yanks the text out of its box */
+div#page h2 span
+{
+	position: relative;
+	top: -1.25em;
+	left: 0.35em;
+}
+
+/* H3 headers are used for sub-headers within the Skills and Employment sections */
+
+div#page h3
+{
+	font-size: 1.0em;
+    padding-top: 2px;
+}
+
+/* ===================================== Common Layout Properties ========================== */
+
+/* Several elements have a consistent gutter from the left side of the page */
+
+div#page dl#portfolio-and-objective,
+	div#page ul#skills,
+	div#page ul.experience,
+	p#education
+{
+	margin-left: 0.5em;
+
+}
+
+/* ======== General Unordered List Properties =========== */
+
+div#page ul
+{
+	margin-left: 1.6em;
+	padding-left: 0em;
+}
+
+/* Only IE/Windows sees this \*/
+* html div#page ul
+{
+	margin-left: 1.7em;
+}
+/* End IE/Windows hiding */
+
+
+
+/* ============================== Contact Information =========================== */
+
+
+/* My contact information (name & addrees) */
+
+div#page ul#contact-information
+{
+	margin-bottom: 1.5em;
+	text-align: right;
+}
+
+div#page ul#contact-information,
+	ul#contact-information li
+{
+	margin-left: 0em;
+	margin-right: 0em;
+	padding-left: 0em;
+	padding-right: 0em;
+}
+
+ul#contact-information li
+{
+	display: inline;
+
+	padding-left: 9px; /* Leaves room for the background-image */
+	background-image: url(http://www.handcoding.com/portfolio/resume/images/bullet.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+ul#contact-information li#first-contact-information-list-item
+{
+	/* The first item has no bullet */
+	background-image: none;
+}
+
+/* ============================== Portfolio and Objective =========================== */
+
+/* "Portfolio" / "Objective" */
+dl#portfolio-and-objective dt
+{
+	float: left;
+	clear: left;
+	width: 6.8em;
+
+	font-size: 1.2em;
+	font-weight: bold;
+
+	height: 1.0em;
+	overflow: visible;
+}
+
+dl#portfolio-and-objective dt,
+	dl#portfolio-and-objective dd
+{
+	margin-bottom: 1.0em;
+}
+
+dl#portfolio-and-objective dd
+{
+	line-height: 1.55em;
+}
+
+/* =========================== Unordered lists for the Skills & Experience sections ======================= */
+
+/* The parent list containing that whole section */
+div#page ul#skills,
+	div#page ul.experience
+{
+	padding-left: 0em;
+}
+
+/* Individual skill-categories or employer-entries */
+div#page ul#skills li,
+	div#page ul.experience li
+{
+	list-style-type: none;
+}
+
+/* A specific skill within a skills category or a specific bullet under an employer */
+div#page ul#skills li ul,
+	div#page ul.experience li ul
+{
+	margin-left: 1.3em;
+}
+
+div#page ul#skills li ul
+{
+	/* The nested unordered lists don't get bottom margins because the
+		parent unorderd lists already have a bottom margin and if those
+		were combined it would be too much of a margin. */
+	margin-bottom: 0em;
+}
+
+div#page ul#skills li ul li,
+	div#page ul#experience li ul li
+{
+	list-style-type: disc;
+}
+
+/* ==================================== Skills Section ========================================== */
+
+/* This makes use of auto float clearing:
+	http://www.positioniseverything.net/easyclearing.html */
+
+ul#skills:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+ul#skills {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html ul#skills {height: 1%;}
+ul#skills {display: block;}
+/* End hide from IE-mac */
+
+
+ul#skills li#languages,
+    ul#skills li#techniques,
+	ul#skills li#applications,
+	ul#skills li#operating-systems
+{
+	float: left;
+	width: 23%;
+}
+
+ul#skills li#operating-systems
+{
+	width: 28%;
+}
+
+/* An individual skill within a skills category */
+ul#skills li ul li
+{
+	font-size: 8pt;
+}
+
+
+/* ======================================= Experience Section ====================================== */
+
+/* H3 elements encompass the employer information within the experience section */
+h3.experience
+{
+	font-weight: normal;
+}
+
+table.delivery-experience {
+    margin-left: 10px;
+    background-color: snow;
+}
+table.delivery-experience thead tr th,
+    table.experience thead tr th
+{
+    font-style: italic;
+    text-align: center;
+    border-bottom:1px solid #CCC;
+    border-top: 1px solid #CCC;
+}
+
+table.delivery-experience thead tr th.time-duration-col,
+    table.experience thead tr th.time-duration-col
+{
+    width:22%;
+}
+
+table.experience tbody tr.internal
+{
+    background-color: snow;
+}
+table.experience tbody tr.external-consultancy
+{
+    background-color: lightgreen;
+}
+table.experience tbody tr.external-training
+{
+    background-color: papayawhip;
+}
+table.experience tbody tr.speech
+{
+    background-color: oldlace;
+}
+table.experience tbody tr.article
+{
+    background-color: seashell;
+}
+table.experience tbody tr.book
+{
+    background-color: whitesmoke;
+}
+
+table.delivery-experience tbody tr td,
+    table.experience tbody tr td
+{
+    border-bottom:1px solid #CCC;
+    padding:5px;
+    text-align: center;
+    font-size: 8pt;
+}
+
+
+/* ===================================== Toggle CSS link ======================================== */
+
+p#toggle-css
+{
+	font-size: 0.85em;
+
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+}

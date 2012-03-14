@@ -1,0 +1,22 @@
+
+body
+{
+	font-size: 74.0%; /* Base font size */
+}
+
+/* ========================================= Page ===================================== */
+
+/* This holds the resume as a whole */
+
+div#page
+{
+	width: auto;
+	padding: 0em;
+}
+
+/* ============================== Toggle CSS link =========================== */
+
+p#toggle-css
+{
+	display: none;
+}
